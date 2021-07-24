@@ -66,6 +66,8 @@ dependencies {
     implementation(Dependencies.Network.okHttp)
 
     implementation(Dependencies.Koin.android)
+    implementation(Dependencies.timber)
+    implementation(Dependencies.lottie)
 
     testImplementation(TestDependencies.junit)
     testImplementation(TestDependencies.Room.testing)
