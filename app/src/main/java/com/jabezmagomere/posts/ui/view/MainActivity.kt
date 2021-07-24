@@ -103,8 +103,10 @@ class MainActivity : AppCompatActivity() {
     private fun showSuccessState(isSuccess: Boolean) {
         if (isSuccess) {
             binding.loadingState.hide()
+            binding.uiState.hide()
         } else {
             binding.loadingState.hide()
+            binding.uiState.hide()
             showEmptyState()
         }
     }
