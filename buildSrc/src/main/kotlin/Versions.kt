@@ -1,5 +1,5 @@
 object Versions {
-    const val kotlin = "1.4.32"
+    const val kotlin = "1.5.21"
     const val androidGradlePlugin = "4.1.3"
 
     const val androidxCore = "1.6.0"
@@ -13,6 +13,7 @@ object Versions {
     const val lifecycle = "2.3.1"
     const val koin = "3.1.2"
     const val timber = "4.7.1"
+    const val lottie = "3.4.0"
 
     const val androidxJunit = "1.1.3"
     const val espressoCore = "3.4.0"

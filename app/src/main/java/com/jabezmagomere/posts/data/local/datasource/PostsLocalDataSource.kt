@@ -10,7 +10,7 @@ interface PostsLocalDataSource {
     suspend fun insert(posts: List<Post>)
 }
 
-class PostLocalDataSourceImpl(private val postsDao: PostsDao) : PostsLocalDataSource {
+class PostsLocalDataSourceImpl(private val postsDao: PostsDao) : PostsLocalDataSource {
 
     override fun getPosts(): Flow<List<PostView>?> = postsDao.getPosts()
 

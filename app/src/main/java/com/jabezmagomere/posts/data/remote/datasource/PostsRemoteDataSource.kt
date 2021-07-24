@@ -1,12 +1,12 @@
 package com.jabezmagomere.posts.data.remote.datasource
 
+import android.util.Log
 import com.jabezmagomere.posts.data.remote.api.PostsApi
 import com.jabezmagomere.posts.data.remote.models.NetworkResult
 import com.jabezmagomere.posts.data.remote.models.PostResponse
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import timber.log.Timber
 
 interface PostsRemoteDataSource {
     suspend fun fetchPosts(): NetworkResult<List<PostResponse>?>
@@ -26,7 +26,7 @@ class PostsRemoteDataSourceImpl(
                     NetworkResult.Error(Exception(response.message()))
                 }
             } catch (exception: Exception) {
-                Timber.e(exception)
+                Log.e("NETWORK_EXCEPTION", exception.message.toString())
                 NetworkResult.Error(exception)
             }
         }

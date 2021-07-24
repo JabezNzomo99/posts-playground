@@ -38,7 +38,6 @@ object Dependencies {
 
     object Koin {
         const val android = "io.insert-koin:koin-android:${Versions.koin}"
-        const val viewModel = "io.insert-koin:koin-android-viewmodel:${Versions.koin}"
     }
 
     const val material = "com.google.android.material:material:${Versions.material}"

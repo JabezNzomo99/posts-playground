@@ -1,6 +1,7 @@
 plugins {
     id(BuildPlugins.androidApplication)
     id(BuildPlugins.kotlinAndroid)
+    id(BuildPlugins.kapt)
 }
 
 android {
@@ -35,6 +36,10 @@ android {
     (kotlinOptions).apply {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -52,7 +57,7 @@ dependencies {
     implementation(Dependencies.LifeCycle.runtime)
 
     implementation(Dependencies.Room.runtime)
-    implementation(Dependencies.Room.compiler)
+    kapt(Dependencies.Room.compiler)
     implementation(Dependencies.Room.ktx)
 
     implementation(Dependencies.Network.retrofit)
@@ -61,9 +66,6 @@ dependencies {
     implementation(Dependencies.Network.okHttp)
 
     implementation(Dependencies.Koin.android)
-    implementation(Dependencies.Koin.viewModel)
-
-    implementation(Dependencies.timber)
 
     testImplementation(TestDependencies.junit)
     testImplementation(TestDependencies.Room.testing)
