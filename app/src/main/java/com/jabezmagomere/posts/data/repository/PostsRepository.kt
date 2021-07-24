@@ -7,17 +7,17 @@ import com.jabezmagomere.posts.data.toPosts
 import com.jabezmagomere.posts.ui.models.Result
 
 class PostsRepository(
-    private val postsLocalDataSource: PostsLocalDataSource,
+    private val localDataSource: PostsLocalDataSource,
     private val remoteDataSource: PostsRemoteDataSource
 ) {
 
-    fun getPosts() = postsLocalDataSource.getPosts()
+    fun getPosts() = localDataSource.getPosts()
 
     suspend fun fetchPosts(): Result<Boolean> {
         return when (val postsResponse = remoteDataSource.fetchPosts()) {
             is NetworkResult.Success -> {
                 if (!postsResponse.data.isNullOrEmpty()) {
-                    postsLocalDataSource.insert(postsResponse.data.toPosts())
+                    localDataSource.insert(postsResponse.data.toPosts())
                     Result.Success(true)
                 } else {
                     Result.Success(false)
