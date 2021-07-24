@@ -42,7 +42,6 @@ object Dependencies {
 
     const val material = "com.google.android.material:material:${Versions.material}"
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
-    const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"
 }
 
 object TestDependencies {
@@ -57,4 +56,7 @@ object TestDependencies {
     }
 
     const val junit = "junit:junit:${Versions.junit}"
+    const val hamcrest = "org.hamcrest:hamcrest-library:${Versions.hamcrest}"
+    const val mockk = "io.mockk:mockk:${Versions.mockk}"
+    const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
 }

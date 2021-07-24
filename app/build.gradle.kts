@@ -67,9 +67,11 @@ dependencies {
 
     implementation(Dependencies.Koin.android)
     implementation(Dependencies.timber)
-    implementation(Dependencies.lottie)
 
     testImplementation(TestDependencies.junit)
+    testImplementation(TestDependencies.mockk)
+    testImplementation(TestDependencies.hamcrest)
+    testImplementation(TestDependencies.coroutines)
     testImplementation(TestDependencies.Room.testing)
     androidTestImplementation(TestDependencies.AndroidX.junit)
     androidTestImplementation(TestDependencies.AndroidX.espresso)
