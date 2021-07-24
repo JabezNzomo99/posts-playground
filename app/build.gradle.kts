@@ -63,6 +63,7 @@ dependencies {
     implementation(Dependencies.Koin.android)
     implementation(Dependencies.Koin.viewModel)
 
+    implementation(Dependencies.timber)
 
     testImplementation(TestDependencies.junit)
     testImplementation(TestDependencies.Room.testing)

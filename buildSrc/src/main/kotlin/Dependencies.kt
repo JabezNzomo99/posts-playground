@@ -42,6 +42,7 @@ object Dependencies {
     }
 
     const val material = "com.google.android.material:material:${Versions.material}"
+    const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 }
 
 object TestDependencies {

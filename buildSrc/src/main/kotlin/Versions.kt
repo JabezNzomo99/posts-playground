@@ -12,6 +12,7 @@ object Versions {
     const val coroutines = "1.5.1"
     const val lifecycle = "2.3.1"
     const val koin = "3.1.2"
+    const val timber = "4.7.1"
 
     const val androidxJunit = "1.1.3"
     const val espressoCore = "3.4.0"
