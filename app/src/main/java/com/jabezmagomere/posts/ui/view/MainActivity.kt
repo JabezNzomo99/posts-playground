@@ -1,7 +1,8 @@
-package com.jabezmagomere.posts
+package com.jabezmagomere.posts.ui.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.jabezmagomere.posts.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
