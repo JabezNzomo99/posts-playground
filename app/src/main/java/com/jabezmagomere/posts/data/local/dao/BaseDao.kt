@@ -2,14 +2,15 @@ package com.jabezmagomere.posts.data.local.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 
 @Dao
 interface BaseDao<T> {
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(t: T)
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(t: List<T>)
 
     @Insert
